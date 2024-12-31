@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="Abed Al RAHMAN" content="CS2204" />
+  <meta name="description" content="This is an additional free format Web page for you to acknowledge the sources of information used in your design. If you use images, icon or text obtained from the Internet, write the source and links in this page. " />
+  <meta name="keywords" content="design,name,acknowledgement"/>
+  <title>Design Page</title>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <div id="header">
+      <div id="div1">
+        <img src="../image/logo.png" alt="ticket">
+      </div>
+      <div id="header_text">
+        <h1>DisneyLand</h1>
+      </div>
+    </div>
+  </header>
+  <div id="welcome">
+    <p>Welcome</p>
+  </div>
+  <br>
+    <h1>Design Page</h1>
+  <br>
+  <h3>I have put in tremendous amount of work and dedication to hone the craft of webpage design and functionality with javascript, as taught by my professor. 
+  <br>
+      I have used the following techniques to make the webpages functional and responsive: 
+      <br><br>
+      Use of two ways of event handlers, that are well written and coordinated between the JS and HTML files. 
+      In particular, please pay attention to <stong>lines 48-126 and lines 32-34</stong> of my index.js file, 
+      and  <strong>lines 135-138 </strong>of my order.js file, where I have put in a lot of effort to formulate the event handlers.
+  </h3>
+
+  <br>
+  <h3>
+    The validateForm function from the index.js (lines 16-44), is a named function that takes no parameters, but it accesses the form and error elements by their ids. It gets the values of the date, time and guests fields from the form element and validates them for empty strings. If any of them are empty, it displays an error message in the error element and returns false to stop the form submission. If all of them are filled, it clears the error message and calls another function named reserve with the date, time and guests values as arguments. This function checks if there is availability for the reservation at Disneyland and returns a boolean value. If the reserve function returns true, the validateForm function alerts the user that the reservation is done, resets the form and returns true to allow the form submission. If the reserve function returns false, the validateForm function alerts the user that Disneyland has reached the maximum number of visitors for the day, resets the form and returns true to allow the form submission. The validateForm function is also assigned as an event handler for the onsubmit event of the form element, which means it will be executed whenever the user submits the form.
+
+  </h3>
+  <br>
+  <h3>
+    The addRow function from the order.js (lines 76-104) is a named function that takes the id of a button as a parameter and adds a new row to the table with the details of the item corresponding to the button. It also updates the total quantity of the items and calls the recal function to display it. It is called from the order html page, when a button is clicked. The undo function on the other hand (lines 106-115, 122-126), is another function that removes the last row from the table and updates the total quantity of the items. It is called from an anonymous function that is assigned as an event handler for the click event of a link element. The recal function (lines 48-74, 106-115) is another named function that displays the total quantity of the items in an element. It is called from other functions such as addRow and undo. Lastly, the anonymous function is created using a function expression syntax and it prevents the default behavior of the link element using the preventDefault method. It also registers itself as an event handler using the addEventListener method.
+  </h3>
+    <br> <br>
+    
+  <h2>References</h2> 
+  <br>
+<h3>
+  I have used Unsplash.com to find the images for my webpages. As far as I am concerned, they are completely royalty free and can be used by any content creators without copyright issues. As for the images that appear on the order page, 
+  I have downloaded them from my course instructor's Canvas file.
+</h3>
+  <br> <br>
+
+  <h2>Name:Abed Al RAHMAN</h2>
+  <h2>SID:57744270</h2>
+
+    <!-- footer block -->
+  <footer> 
+    <p>&copy CityU 2022 sources of images and text from Wikipedia Commons and Courtesy of Icon pack by Icons8 -- designed by <a href="./html/design_page.html">CS2204</a></p>
+  </footer>
+
+</body>
+</html>

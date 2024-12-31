@@ -1,0 +1,181 @@
+html {
+  position: relative;
+  min-height: auto;
+}
+
+body {
+  background-image: url("../image/Castle-1.jpg");
+  background-size: cover;
+}
+
+label{
+  color: black;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gold;
+}
+
+/* This is where I used animation to enhance the aesthetics of the website. */
+#header_text {
+  animation: fly-in 2s ease-out;
+}
+
+@keyframes fly-in {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/* This is where I used animation to enhance the aesthetics of the website. */
+#welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid gray;
+  text-transform: uppercase;
+  color: purple;
+  background-color: gray;
+  position: relative;
+}
+
+#welcome::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 10px blue;
+  opacity: 0;
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#container {
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 75%;
+  float: left;
+  color: beige;
+  background-color: gray;
+  padding: 5px;
+}
+
+#orderedItems{border-radius: 10px;
+  border:rgb(159, 159, 159);
+  border-style:solid;
+  float:right;
+  text-align: center;
+  width:22%;
+  color: beige;
+  background-color: gray;
+}
+
+#menu_ticket{
+  display: none;
+}
+#menu_dinings{
+  display: none;
+}
+#menu_hotel{
+  display: none;
+}
+
+#ticketLabel, #hotelLabel, #diningLabel {
+  background: gray;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid black;
+  width: 30%;
+  font-size: 1.5em;
+}
+
+#diningLabel {
+  width: 35%;
+  justify-content: center;
+}
+
+/* The following part has been commented out, as it is replaced with alternative javascript code in the order.js file. */
+
+/* #hotelLabel:hover ~ #menu_hotel{
+  display: block;
+  background-color: whitesmoke;
+}
+#diningLabel:hover ~ #menu_dinings{
+  display: block;
+  background-color: whitesmoke;
+  
+}
+#ticketLabel:hover ~ #menu_ticket{
+  display: block;
+  background-color: whitesmoke;
+}
+#ticketLabel:hover{ background-color: whitesmoke;}
+#diningLabel:hover{ background-color: whitesmoke;}
+#hotelLabel:hover{ background-color: whitesmoke;} */
+
+.b1{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.b2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.b3{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+footer {
+  clear: both;
+  justify-self: end;
+  border: 1px solid rgb(100, 100, 100);
+  border-radius: 5px;
+  padding: 5px;
+  color: beige;
+  background-color: gray;
+}

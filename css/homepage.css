@@ -1,0 +1,215 @@
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gold;
+}
+
+/* This is where I used animation to enhance the aesthetics of the website. */
+#header_text {
+  animation: fly-in 2s ease-out;
+}
+
+@keyframes fly-in {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+body {
+  background-image: url("../image/Castle-2.jpg");
+  background-size: cover;
+}
+  
+  #div1 {
+    margin-right: 10px;
+  }
+
+  #header_text {
+    text-align: center;
+  }
+
+/* This is where I used animation to enhance the aesthetics of the website.  */
+#welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid gray;
+  text-transform: uppercase;
+  color: purple;
+  background-color: gray;
+  position: relative;
+}
+
+#welcome::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 10px red;
+  opacity: 0;
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#welcome:hover::before {
+  animation: expand 0.5s forwards;
+}
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1.5fr 2fr;
+    grid-template-rows: auto;
+  }
+  
+  .box1 {
+    height: 131%;
+    border: 3px solid whitesmoke;
+    padding: 10px;
+    padding-top: 0px;
+    color: azure;
+  }
+
+  .box1 dt {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    color: azure;
+  }
+
+  .info dl dd {
+    margin-bottom: 5%;
+    margin-top: 0.5rem;
+  }
+
+  .box2 {
+    border: 3px solid whitesmoke;
+    padding: 10px;
+    height: auto;
+    width: auto;
+    color: azure;
+  }
+  
+  .box3 {
+    justify-self: end;
+    width: 99%;
+    height:105%;
+    border: 3px solid whitesmoke;
+    padding: 5px;
+    color: azure;
+  }
+
+  .box1, .box2, .box3 {
+    box-shadow: inset;
+    border-radius: 10px;
+  }
+
+  #Video1 {
+     width: 100%;
+     height: auto;
+     object-fit: cover;
+  }
+
+  #Video2 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+ }
+
+  #reservation_form {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input[type="number"], input[type="date"] {
+    display: inline-block;
+    width: 45%;
+    padding: 5px;
+    font-size: 1em;
+    margin: 5px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="submit"], input[type="reset"] {
+    display: inline-block;
+    width: auto;
+    min-width: 100px;
+    font-weight: bold;
+  }
+  
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .form_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+  }
+
+
+  footer {
+    grid-area: footer;
+    text-align: center;
+    border: 3px solid whitesmoke;
+    border-radius: 15px;
+    color: azure;
+  }
+
